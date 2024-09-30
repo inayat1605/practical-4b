@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise #9: Labyrinth game</title>
+    <style>
+        
+        #map {
+            position: relative;
+            border: 1px solid black; 
+        }
+        .cell {
+            width: 40px; 
+            height: 40px; 
+            display: inline-block;
+        }
+        .wall {
+            background-color: grey; 
+        }
+        .empty {
+            background-color: white;
+        }
+        .character {
+            background-color: blue; 
+        }
+        .destination {
+            background-color: green; 
+        }
+    </style>
+    <script src="labyrinth.class.js"></script>
+    <script src="game.js"></script>
+</head>
+<body>
+    <h1>Labyrinth Game</h1>
+    <div id="map"></div>
+</body>
+</html>

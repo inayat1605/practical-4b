@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise #2: Changing colors</title>
+    <style>
+        #mydiv {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+         document.addEventListener("DOMContentLoaded", () => {
+            const myDiv = document.getElementById("mydiv");
+            let currentColor = "blue"; 
+
+            myDiv.addEventListener("click", () => {
+                if (currentColor === "blue") {
+                    myDiv.style.backgroundColor = "red";
+                    currentColor = "red";
+                } else if (currentColor === "red") {
+                    myDiv.style.backgroundColor = "green";
+                    currentColor = "green";
+                } else {
+                    myDiv.style.backgroundColor = "blue";
+                    currentColor = "blue";
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="mydiv"></div>
+</body>
+</html>

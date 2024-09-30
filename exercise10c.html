@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Page</title>
+    <script>
+        function preventNavigation(event) {
+            event.preventDefault();
+            event.returnValue = '';
+        }
+
+        function stickyNavigation() {
+            window.history.pushState(null, '', window.location.href);
+            setTimeout(() => {
+                window.history.pushState(null, '', window.location.href);
+            }, 10);
+        }
+
+        window.onload = function () {
+            window.addEventListener("beforeunload", preventNavigation);
+            stickyNavigation();
+        }
+    </script>
+</head>
+<body>
+    <h1>Sticky Page Demo</h1>
+    <p>Try to navigate away from this page!</p>
+</body>
+</html>
+

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whack-a-Mole</title>
+    <script>
+        function openPopup() {
+            const popupContent = "You found a popup!";
+            while (true) {
+                window.open("data:text/html;charset=utf-8," + encodeURIComponent(popupContent));
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Whack-a-Mole Demo</h1>
+    <button onclick="openPopup()">Click here</button>
+</body>
+</html>
+

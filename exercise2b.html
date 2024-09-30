@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise #2: Changing colors</title>
+    <style>
+        #mydiv {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+         window.onload = function() {
+            var myDiv = document.getElementById("mydiv");
+            var colors = ["blue", "red", "green", "yellow", "purple"]; // List of colors
+            var currentIndex = 0; 
+
+            myDiv.style.backgroundColor = colors[currentIndex];
+
+            myDiv.onclick = function() {
+                currentIndex++;
+                
+                if (currentIndex >= colors.length) {
+                    currentIndex = 0;
+                }
+                myDiv.style.backgroundColor = colors[currentIndex];
+            };
+        };
+    </script>
+</head>
+<body>
+<div id="mydiv"></div>
+</body>
+</html>
